@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass{memoir}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{float}
@@ -7,16 +7,22 @@
 \MakeOuterQuote{"}
 \usepackage[pdfpagemode=useNone,pdfstartview=FitH,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage[all]{hypcap}
-\usepackage[title]{appendix}
-
-\title{Single-Variable Calculus}
+\title{General Relativity Explained}
 \author{physicsnerd}
-\begin{document}
+\addtopsmarks{headings}{}{
+\createmark{chapter}{both}{nonumber}{}{}
+}
 
+\begin{document}
+\frontmatter
 \maketitle
 \tableofcontents
-
-\section{Overview}
+\chapter{Preface}
+\input{preface.tex}
+\mainmatter
+\part{Mathematics}
+\chapter{Algebra}
+\chapter{Calculus}
 Calculus is the study of change. 
 There are two main branches to calculus: differential and integral calculus. 
 Differential calculus studies the slopes of lines, or the rate of change, using the derivative. 
@@ -72,26 +78,32 @@ Solve the following integrals:
 \section{Applications}
 
 \input{applications.tex}
-
-\medskip
+\section{Multivariable Calculus}
+\chapter{Linear Algebra}
+\chapter{Special Matters}
+topology, manifolds, covariant derivatives, and all that jazz
+\part{General Relativity}
+\chapter{Introduction}
+\chapter{Einstein's Field Equations}
+\section{Summary}
+\section{Rough Derivation}
+\chapter{Solutions to the Field Equations}
+\section{Schwarzschild Solution}
+\section{Big Bang}
+\section{Gravitational Waves}
 
 \section{Worked Solutions}
 
 \input{solutions.tex}
 
 \input{nocites.tex}
-
 \bibliographystyle{plain}
 \bibliography{resources}
 \addcontentsline{toc}{section}{References}
 \begin{appendices}
 \section{Circles with Calculus}
-\subsection{Formal Proofs}
-\subsubsection{Area of a circle}
-It is given that there is a circle, with a radius $r$, and the circumference of a circle is $2\pi r$. If we think of the circle as a series of concentric rings, we can then integrate $2\pi r$ over the interval $0$ to $r$, or from the center of the circle to the outer rim of the circle. So we now have the integral $\int^r_0 2\pi r\, dr$. We then may simplify by the definition of an integral to $\frac{2\pi r^2}{2}\mid^r_0$, and simplify yet further to $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, which then becomes $\frac{2\pi r^2}{2}$ or $\pi r^2$. Therefore, we have shown that the area of a circle with radius $r$ is $\pi r^2$.
-\subsubsection{Circumference of a circle}
-\subsection{Intuition}
 \input{appendix1.tex}
+A more rigorous proof of this is left to the reader if they are interested.
 \end{appendices}
 \end{document}
 
