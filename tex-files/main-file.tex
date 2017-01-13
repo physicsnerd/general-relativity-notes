@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[english]{babel}
+\usepackage[english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage[pdfpagemode=useNone,pdfstartview=FitH,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage[title]{appendix}
+
+\title{Single-Variable Calculus}
+\author{physicsnerd}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Overview}
+Calculus is the study of change. 
+There are two main branches to calculus: differential and integral calculus. 
+Differential calculus studies the slopes of lines, or the rate of change, using the derivative. 
+Integral calculus studies the area under a curve. 
+Many problems in many fields of science boil down to one of these two problems. 
+Here, we will go over how to solve problems in the main fields of calculus, some applications of calculus, and finally some next steps in your study of calculus.
+
+\section{Terms to Know}
+
+\input{termstoknow.tex}
+
+\section{Limits}
+
+\input{limits.tex}
+
+\section{Problems}
+\begin{enumerate}
+    \item $$\lim\limits_{x\rightarrow 3} 2x+5$$
+    \item $$\lim\limits_{x\rightarrow 4} \frac{x^2-16}{x-4}$$
+    \item $$\lim\limits_{x\rightarrow 9} \frac{\sqrt{x}-3}{x-9}$$
+    \item $$\lim\limits_{x\rightarrow 0} \frac{1}{x^2}$$
+    \item $$\lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1}$$
+\end{enumerate}
+
+\section{Differential}
+
+\input{derivative.tex}
+
+\section{Problems}
+\begin{enumerate}
+    \item $5x$
+    \item $6x^3 - 9x + 4$
+    \item $2t^4 - 13t$
+    \item $x^{-1}$
+    \item $\sqrt{x}$
+\end{enumerate}
+
+\section{Integral}
+
+\input{integral.tex}
+
+\section{Problems}
+Solve the following integrals:
+
+\begin{enumerate}
+    \item $\int x \, dx$
+    \item $\int x^2-5 \, dx$
+    \item $\int^5_0 x^2 \, dx$
+    \item $\int^5_3 x^2 \, dx$
+    \item $\int^5_3 x^2 + 1 \, dx$
+\end{enumerate}
+
+\section{Applications}
+
+\input{applications.tex}
+
+\medskip
+
+\section{Worked Solutions}
+
+\input{solutions.tex}
+
+\input{nocites.tex}
+
+\bibliographystyle{plain}
+\bibliography{resources}
+\addcontentsline{toc}{section}{References}
+\begin{appendices}
+\section{Circles with Calculus}
+\subsection{Formal Proofs}
+\subsubsection{Area of a circle}
+It is given that there is a circle, with a radius $r$, and the circumference of a circle is $2\pi r$. If we think of the circle as a series of concentric rings, we can then integrate $2\pi r$ over the interval $0$ to $r$, or from the center of the circle to the outer rim of the circle. So we now have the integral $\int^r_0 2\pi r\, dr$. We then may simplify by the definition of an integral to $\frac{2\pi r^2}{2}\mid^r_0$, and simplify yet further to $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, which then becomes $\frac{2\pi r^2}{2}$ or $\pi r^2$. Therefore, we have shown that the area of a circle with radius $r$ is $\pi r^2$.
+\subsubsection{Circumference of a circle}
+\subsection{Intuition}
+\input{appendix1.tex}
+\end{appendices}
+\end{document}
+

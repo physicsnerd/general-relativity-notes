@@ -1,0 +1,65 @@
+A few of the problems have been taken from Apostol's Calculus, Volume 1.
+
+Integrals: 
+\begin{enumerate}
+\item $\int x \, dx = \frac{x^2}{2}+c$ For this one, all you have to do is use the table given. 
+Because it is an indefinite integral, don't forget to add $c$!
+\item $\int x^2 - 5 \,dx = \int x^2 \, dx - \int 5 \, dx = \frac{x^3}{3}-5x + c$ Remember that the integral is distributive over addition and subtraction. 
+Also, remember that there is only one $c$ added to the solution of any indefinite integral.
+\item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{0^3}{3}=\frac{5^3}{3}=\frac{125}{3}$ Remember that $\mid^5_0$ is simply a piece of notation that allows us to keep track of what we are integrating over as we integrate.
+\item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{3^3}{3} = \frac{125}{3} - \frac{27}{3} = \frac{125}{3}-9$ Note that in this case (and the previous problem) you could simplify a bit further, but this is as far as we'll go.
+\item $\int^5_3 x^2 + 1\, dx = \int^5_3 x^2 \, dx + \int^5_3 1 \, dx = \frac{x^3}{3}+x\mid^5_3 = \frac{5^3}{3}+5 - \frac{3^3}{3}+3 = \frac{125}{3}+5 - \frac{27}{3}+3 = \frac{125}{3}+5 - 12 = \frac{125}{3}-7$
+\end{enumerate}
+
+Derivatives:
+\begin{enumerate}
+\item $\frac{d}{dx} \, 5x = 5$ Here, we simply follow the rules in the table.
+\item $\frac{d}{dx} \, 6x^2 - 9x + 4 = 12x - 9$ Remember that constants simply disappear, and the exponent rules outlined in the table.
+\item $\frac{d}{dx} \, 2t^4 - 13t = 8t^3 - 13$
+\item $\frac{d}{dx}\, x^{-1} = -x^{-2}$ 
+\item $\frac{d}{dx}\, \sqrt{x} = \frac{d}{dx}\, x^{\frac{1}{2}} = \frac{1}{2}x^{-\frac{1}{2}}$ This one requires knowing how roots translate into exponents, but after that, it isn't so bad.
+\end{enumerate}
+
+Limits:
+\begin{enumerate}
+\item \begin{equation*}
+    \lim\limits_{x\rightarrow 3} 2x+5 = 2(3)+5 = 11
+\end{equation*} This is just the "easy" type of limit.
+\item \begin{equation*}
+    \lim\limits_{x\rightarrow 4}\frac{x^2-16}{x-4} = \lim\limits_{x\rightarrow 4}\frac{(x-4)(x+4)}{x-4} = \lim\limits_{x\rightarrow 4}x+4 = 8
+\end{equation*} Here we have to do some algebraic manipulation - factoring. Then, after we cancel, it converts to the easy form, and we can just plug in $x$ and go.
+\item \begin{align*}
+    & \lim\limits_{x\rightarrow 9}\frac{\sqrt{x}-3}{x-9}=  \lim\limits_{x\rightarrow 9}\left(\frac{\sqrt{x}-3}{x-9}\right) \left(\frac{\sqrt{x}+3}{\sqrt{x+3}}\right) = \\  &\lim\limits_{x\rightarrow 9} \frac{x+3\sqrt{x}-3\sqrt{x}-9}{(x-9) (\sqrt{x}+3)}=\lim\limits_{x\rightarrow 9}\frac{x-9}{(x-9)(\sqrt{x}+3)} = \\ & \lim\limits_{x\rightarrow 9}\frac{1}{\sqrt{x}+3} =\frac{1}{\sqrt{9}+3}=\frac{1}{6}
+\end{align*}
+Here, again, we must do some algebraic manipulation. 
+We rationalize the denominator by multiplying by the conjugate over itself (we must do that, so if we divide it equals one) and then the top and bottom cancel, and so we are left with something we can simply plug in. 
+Don't be tricked here - this did not convert into a "$\frac{1}{0}$" limit so we don't need to do anything special.
+\item \begin{align*}
+    &\lim\limits_{x\rightarrow 0} \frac{1}{x^2}\\
+    &\lim\limits_{x\rightarrow 0^+} \frac{1}{x^2} = +\infty\\
+    &\lim\limits_{x\rightarrow 0^-} \frac{1}{x^2} = +\infty\\
+    &\lim\limits_{x\rightarrow 0} \frac{1}{x^2} = +\infty
+\end{align*}
+Remember how for $\frac{1}{0}$ limits we must do the right and left limit, and check if their result is equal. 
+To do that, we look at approaching $0$ first from the right (so very small positive numbers) and then square them, making them even smaller, and then we divide one by these tiny numbers, giving a huger and huger output as we approach zero. 
+Therefore, this gives positive infinity. 
+Now, when approaching from the left, you might expect negative infinity to be the answer, but we are squaring $x$, meaning that this turns into tiny positive numbers, so again, we are left with positive infinity.
+\item \begin{equation*}
+    \lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1} = \lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1} \cdot \frac{\sqrt{x}+1}{\sqrt{x}+1} = \lim\limits_{x\rightarrow 1} \frac{x-1}{(x-1)(\sqrt{x}+1)}=\lim\limits_{x\rightarrow 1} \frac{1}{\sqrt{x}+1} = \frac{1}{2}
+\end{equation*}
+Here we are rationalizing the numerator again. Again, don't be tricked - it does not turn into a $\frac{1}{0}$ limit.
+\end{enumerate}
+
+Applications:
+\begin{enumerate}
+\item $f(x) = 5x^2 \; W = \int^b_a f(x) \, dx \; \int^127_0 5x^2 \, dx = 5\cdot \frac{x^3}{3}\mid^{127}_0 = \frac{127^3}{3}-\frac{0^3}{3} = \frac{127^3}{3} = \frac{2048383}{3} \,\text{foot-pounds}$
+Remember here that $W$, or work, is equivalent to the integral $\int^b_a f(x) \, dx$. From there, we just plug in the force equation and go.
+\item First, remember that according to Hooke's Law, force is proportional to $x$. 
+So here we get $f(x) = 10x$. 
+Then, we consider displacement - well, we're stretching the spring one foot, so $b=12$ and $a = 0$. 
+Remember here that we're using inches! 
+Now we plug it in: $\int^{12}_0 10x \, dx = 10\cdot\frac{x^2}{2}\mid^{12}_0$. 
+Now we know that the second part will all come out to zero, so we are left with $10\cdot\frac{12^2}{2}$ or $10\cdot\frac{144}{2} = 10\cdot 72 = 720$ - but what are our units? 
+Well, we are multiplying inches by pounds, so inch-pounds. 
+But we can simplify to foot-pounds by dividing our answer by $12$. This gives us $60$ foot-pounds.
+\end{enumerate}
