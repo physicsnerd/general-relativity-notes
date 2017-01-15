@@ -1,0 +1,11 @@
+Here we will examine only one part of multivariable calculus, partial derivatives.
+Partial derivatives are actually not too difficult once you know how to do normal derivatives.
+The basic principle is this: given a function, take the derivative of it with respect to one variable, while treating the other variables as constants.
+How does this work? Well, let's take as an example the function $f(x,y)=3x-2y^4$.
+We would first take the derivative of this function with respect to $x$, treating $y$ as a constant. 
+So, the derivative of $f_x$ would equal $3$ - the second term vanishes because $y$ is a constant. 
+Then, we would take the derivative of the function with respect to $y$, treating $x$ as a constant.
+The derivative of $f_y$ would equal, therefore, $-8y^3$. 
+So the partial derivative of $f(x,y)$ is $f_x=3, f_y=-8y^3$.
+Let's do this again with a more complicated function. Given $f(x,y,z)=xy^2z^3+3yz$, we would get $f_x=y^2z^3$, $f_y=xz^32y+3z$, and $f_z=xy^23z^2+3y$.
+The other important thing to mention is how partial derivatives are written. Instead of writing $\frac{d}{dx}$ or $\frac{dx}{dy}$ to represent derivatives (the second representing the derivative of the function $x$ with respect to $y$ and the first representing the derivative of what follows with respect to $x$) we write $\frac{\partial}{\partial x}$ or $\frac{\partial x}{\partial y}$ - the $\partial$ symbol represents the derivative.

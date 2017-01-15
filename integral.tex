@@ -1,0 +1,63 @@
+The point of the integral is to find the area under a curve. 
+One of the interesting applications of integration is finding the displacement of an object - the displacement corresponds to an object's trajectory; that is, the area under a graph of velocity versus time is displacement.
+
+While we don't actually need to do the following, this is generally what is happening. 
+
+\begin{centering}
+\begin{figure}[H]
+\caption{Riemann Sum}
+\includegraphics[scale=0.8]{rieman.jpg}
+\end{figure}
+\end{centering}
+
+Basically, we pick a specified width, let's say $w$. 
+Then, we create several rectangles, with a width $w$ and a height that is just under the curve we are trying to find the area of. 
+Then, we do this again, but this time the height is just above the curve. 
+We take the average of the two numbers, and get the area of the curve. 
+The smaller we make $w$, the more accurate the number, and at width $0$, we basically have lines, which fit the curve perfectly. 
+This is the point of an integral.
+
+Below is a table of some of the basic outputs of integrals. Some of these will make more sense after going through derivatives.
+
+\begin{tabular}{l|l}
+    $f(x)$ & $\int f(x) \, dx$\\
+    \hline
+     $0$ & $0+c$ \\
+     $1$ & $x+c$ \\
+     $D$ & $Dx+c$ \\
+     $2x$ & $x^2 + c$ \\
+     $x$ & $x^2/2 + c$ \\
+     $x^2$ & $x^3/3 + c$ \\
+     $x^n$ & $x^{n+1}/n+1 + c$
+\end{tabular}
+
+In these, $c$ and $D$ are constants and $x$ is some variable.
+
+Note that after every integral, we must put $dx$ or $dt$ or $d$ and then whatever variable we are using in our integral. 
+The second important thing to note is that these results have $c$ after them because they are ``indefinite'' integrals - that is, because we don't have a specific bound on the integral, we must add a constant $c$ to show that there is some range in what the answers will be. 
+This is again something that will make more sense after going over derivatives.
+
+So there are indefinite integrals, but there are also "definite" integrals. 
+We write them as $\int^b_a$. Basically, let's say we have the integral $\int x \, dx$. 
+We integrate the inside according to the table, getting $x^2/2$, but instead of adding the constant $c$, we then plug in $b$ and $a$ in for $x$ as follows: 
+\begin{equation*}
+    (b^2/2) - (a^2/2)
+\end{equation*}
+
+This gives our answer, and we do not need to put in $c$.
+
+There is another important thing about integrals. For an integral such as $\int x+x \, dx$, we can change this into
+
+\begin{equation*}
+    \int x \, dx + \int x \, dx
+\end{equation*}
+
+We can also factor out constants; for example, given $\int 2x + 3x \, dx$, we can change this into 
+
+\begin{equation*}
+    2\cdot \int x \, dx + 3 \cdot \int x \, dx
+\end{equation*}
+
+Also remember that you can simplify within a problem; i.e., given $x(x^2 + x^3)$ you can then multiply and get $x^3 + x^4$. 
+Finally, there is a helpful rule for integrals - the product rule. 
+If you have a function $v(x)$ and a function $u(x)$, and you wish to find the derivative of $u(x)\cdot v(x)$, you can follow the rule $u\cdot v - \int v\frac{du}{dx}\, dx$. 

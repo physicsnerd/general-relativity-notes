@@ -1,0 +1,115 @@
+\documentclass{memoir}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[english]{babel}
+\usepackage[english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage[pdfpagemode=useNone,pdfstartview=FitH,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[all]{hypcap}
+\title{General Relativity Explained}
+\author{physicsnerd}
+\addtopsmarks{headings}{}{
+\createmark{chapter}{both}{nonumber}{}{}
+}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+\chapter{Preface}
+\input{preface.tex}
+\mainmatter
+\part{Mathematics}
+\chapter{Calculus}
+Calculus is the study of change. 
+There are two main branches to calculus: differential and integral calculus. 
+Differential calculus studies the slopes of lines, or the rate of change, using the derivative. 
+Integral calculus studies the area under a curve. 
+Many problems in many fields of science boil down to one of these two problems. 
+Here, we will go over how to solve problems in the main fields of calculus, some applications of calculus, and finally some next steps in your study of calculus.
+
+\section{Terms to Know}
+
+\input{termstoknow.tex}
+\section{Limits}
+
+\input{limits.tex}
+\section{Problems}
+\begin{enumerate}
+    \item $$\lim\limits_{x\rightarrow 3} 2x+5$$
+    \item $$\lim\limits_{x\rightarrow 4} \frac{x^2-16}{x-4}$$
+    \item $$\lim\limits_{x\rightarrow 9} \frac{\sqrt{x}-3}{x-9}$$
+    \item $$\lim\limits_{x\rightarrow 0} \frac{1}{x^2}$$
+    \item $$\lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1}$$
+\end{enumerate}
+
+\section{Differential}
+
+\input{derivative.tex}
+\section{Problems}
+\begin{enumerate}
+    \item $5x$
+    \item $6x^3 - 9x + 4$
+    \item $2t^4 - 13t$
+    \item $x^{-1}$
+    \item $\sqrt{x}$
+\end{enumerate}
+
+\section{Integral}
+
+\input{integral.tex}
+\section{Problems}
+Solve the following integrals:
+
+\begin{enumerate}
+    \item $\int x \, dx$
+    \item $\int x^2-5 \, dx$
+    \item $\int^5_0 x^2 \, dx$
+    \item $\int^5_3 x^2 \, dx$
+    \item $\int^5_3 x^2 + 1 \, dx$
+\end{enumerate}
+
+\section{Applications}
+\input{applications.tex}
+
+\section{Problems}
+For the second problem, the spring can be assumed to obey Hooke's Law.
+
+\begin{enumerate}
+    \item If throwing a baseball requires a force equivalent to $f(x) = 5x^2$ pounds then find the work necessary to throw a baseball from third to first base (about $127$ feet).
+    \item If a ten-pound force stretches an elastic spring one inch, how much work is done in stretching the spring one foot?
+\end{enumerate}
+
+\section{Multivariable Calculus}
+\input{partialderivatives.tex}
+\section{What Next?}
+What is explained here is just a taste of calculus, and isn't completely formalized (for example, derivatives and integrals are actually defined using limits). There are other fields of calculus that will be useful to you should you choose to study these subjects further. A more rigorous study of single-variable calculus will be necessary for  these. Multivariable calculus as a whole is also recommended; here we only covered partial derivatives. Vector calculus will also be useful, expanding the topics of linear algebra (see chapter two) to calculus. Finally, it is suggested that you study ordinary and partial differential equations. 
+\chapter{Linear Algebra}
+\input{linearalgebra.tex}
+\chapter{Special Matters}
+topology, manifolds, covariant derivatives, and all that jazz
+\part{General Relativity}
+\chapter{Introduction}
+\chapter{Einstein's Field Equations}
+\section{Summary}
+\section{Rough Derivation}
+\chapter{Solutions to the Field Equations}
+\section{Schwarzschild Solution}
+\section{Big Bang}
+\section{Gravitational Waves}
+
+
+\input{nocites.tex}
+\bibliographystyle{plain}
+\bibliography{resources}
+\addcontentsline{toc}{section}{References}
+\begin{appendices}
+\chapter{Circles with Calculus}
+\input{appendix1.tex} \\
+A more rigorous proof of this is left to the reader if they are interested.
+\chapter{Worked Solutions}
+\input{solutions.tex}
+\end{appendices}
+\end{document}
+
