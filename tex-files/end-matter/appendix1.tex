@@ -1,0 +1,115 @@
+Here is the text of a conversation between a teacher and a student, discussing an interesting problem:\\
+Teacher: Do you know the area of a circle with radius $r$?\\
+Student: $\pi r^2$, and circumference is $2\pi r$. \\
+Teacher: Yeah, okay. Prove it. With calculus. Any idea how to do that?\\
+Student: Let me see...it involves an integral, I'm guessing. And then, maybe a definite one, over the interval $0$ to $\pi$? No, that's not right. Well, maybe. but what are you integrating over? Not $r$, if it is a definite integral. Let me think about this more intuitively.
+You rotate the radius around $\pi r$ times, I suppose, to get the area (does that make sense?) and then it might be instead over the interval $\int^{\pi}_r$,\\
+Teacher: Let's think of the disk as a set of concentric rings.\\
+Student: Okay, then, hmm, inside, you'd have some variable $x$, and how would that look...maybe $x^2$? Or something?
+So then integrating that you get $x^3/3$ - 
+no wait, that doesn't make sense either, because then you are subtracting.
+Okay, different way.
+$2\pi r$ is the circumference of the circle,
+so then we can say $2\pi r$ over the interval $0$ to $r$,  I think.
+So then you'd have the integral $\int^r_0 2\pi r \, dr$,
+and then you'd get $\frac{2\pi r^2}{2}\mid^r_0$.\\
+Teacher: Okay, what does that become?\\
+Student: Well, $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, and
+the second part all becomes zero, so now you have $\frac{2\pi r^2}{2}$...
+and then $\pi r^2$!\\
+Teacher: Now review in your mind how you got that answer. You imagine a bunch of rings, each of radius $r$ and length $2 \pi r$.
+If you give that ring a little bit of radial extent $dr$, the area of that new thing is $2 \pi r \times dr$.\\
+Student: Radial extent is how thick the ring is, right?\\
+Teacher: Yes. Then you summed (i.e. integrated) from 0 to $R$ and got $\pi R^2$.\\
+Student: I wonder how you prove $2\pi r = \text{circumference}$.\\
+Teacher: Do you know how to relate arc length to angle?
+I.e., what a radian is?\\
+Student: Barely...\\
+Teacher 2: Well, that's the point where it gets tricky - one often defines $2\pi$ as the ratio of a circle to its radius, so there's nothing to prove.
+There are other definitions (involving more math) of $\pi$ in which $C = 2\pi r$ is an actual theorem but I have to admit that I don't actually know how to derive it from them.\\
+Teacher: I was hoping to prove that the circumference of a circle is equal to the radius times a constant.\\
+Teacher 2: Ah, nevermind then. Carry on.\\
+Teacher: Suppose I move a little bit horizontally $dx$ and a little bit vertically $dy$.
+How far did I move in total?\\
+Student: Well, maybe $\sqrt{dx + dy}$? I don't know if that's what you are looking for.\\
+Teacher 2: Actually, the inside would be squared - $ds=\sqrt{dx^2+dy^2}$.\\
+Teacher: Okay, so the equation for the points on a circle is $$x = R \cos(\theta) \qquad y = R \sin(\theta)$$.
+ Can you write $dx$ in terms of $d\theta$?\\
+Student:  I think you'd say $d(R \cos(\theta)$ - right?\\
+Teacher: Yeah, so assume $R$ is constant...\\
+Student: Then would you get $-\sin(\theta)$?\\
+Teacher: Close. What is $dx / d\theta$? Have you done derivatives of$\sin$ and $\cos$?
+Student: Well, derivative of $\sin$ is $\cos$, derivative of $\cos$ is $-\sin$, derivative of $-\sin$ is $-\cos$, and the derivative of $-\cos$ is $\sin$ (I think).\\
+Teacher: Right, yeah. \\
+Student: I'm kind of confused on what I'm doing with $dx/d\theta$, I guess.\\
+Teacher: Well, $x = R \cos(\theta)$, so $dx/d\theta = \cdots$. You already said it.\\
+Student: $-\sin(\theta)$?\\
+Teacher: Yeah, so what's $dx$?\\
+Student: The same thing?\\
+Teacher: Nope, $dx = - R \sin(\theta) d\theta$.
+We're not being careful about what $dx$ means by itself here, but let's just go with it.
+The meaning is intuitively clear, I think.
+Okay, so what's $dy$?\\
+Student: $-R\cos(\theta)$?\\
+Teacher: Where'd the minus come from, and where's the $d\theta$?\\
+Student: I don't really know.\\
+Teacher: $dy = R \cos(\theta) d\theta$
+Does that make sense?
+$y = R \sin(\theta) \rightarrow dy/d\theta = R \cos(\theta) \rightarrow dy = R \cos(\theta) d\theta$\\
+Student: Hmm, I think so.
+It makes sense, but I'm not sure, given another problem, that I could do it.\\
+Teacher: Which bit is confusing?\\
+Student: What exactly the $dy/d\theta$ means, exactly, I suppose - which equation are we finding the derivative of?\\
+Teacher: We have two equations: $$x = R \cos(\theta) \qquad y = R \sin(\theta)$$
+Those give you the x and y coordinates of the points on a circle, as you vary the angle $\theta$.
+$dx/d\theta$ tells you how $x$ changes as we change the angle $\theta$.\\
+Student: And then $dy/d\theta$ - how $y$ changes as we change $\theta$?\\
+Teacher: Yeah. As you change the angle going around the circle, both x and y change!\\
+Student: But wouldn't $R$, being a constant, vanish from the derivative?\\
+Teacher: Nope. If I have $y = a x$ then $dy/dx = a$.\\
+Student: Oh, that makes sense, sorry.\\
+Teacher: No problem. So we have $$dx = - R \sin(\theta) d\theta \qquad dy = R \cos(\theta) d\theta$$\\
+Student: Okay, I think I follow now.\\
+Teacher: Cool. We also know, as you said, that if we move a bit in x and y, the total distance traveled is $$ds = \sqrt{dx^2 + dy^2}$$\\
+Student: Right. \\
+Teacher: So! Plug it in and see what you get. \\
+Student: $ds = \sqrt{(-R\sin(\theta)d\theta)^2+(R\cos(\theta)d\theta)^2}$ - convoluted madness.
+Simplifying gets
+$\sqrt{(-R\sin (x)dx)(-R\sin(x)dx)+(R\cos(x)dx)(R\cos(x)dx)}$.\\
+Teacher: Alright, but you can simplify that a lot. Multiply stuff together...\\
+Student: Um, let's see, $R^2 \sin^2(x)dx$ for the first part?\\
+And then plus $R^2\cos^2(x)dx$, right?\\
+Teacher: Actually wait a second... $dx = -R \sin(\theta) d\theta$
+You're plugging $dx$ and $dy$ into the $ds$ formula...\\
+Student: Let me try this again.\\
+Teacher: What's $dx^2 = (-R \sin(\theta) d\theta)^2$? $= R^2 \sin(\theta)^2 d\theta^2$.
+So do the same for $dy^2$.\\
+Student: So it'd be $\sqrt{R^2\sin(\theta)^2+R^2\cos(\theta)^2d\theta^2}$?\\
+Teacher: YES!
+Now factor out the stuff you can factor out...
+Oh, and you forgot the $d\theta^2$ in the first term.\\
+Student: Let's see, $R^2$, and $d\theta^2$,
+so then we're left with $Rd\theta\sqrt{\sin(\theta)^2+\cos(\theta)^2}$?\\
+Teacher: No. Forgot to square-root the stuff you pulled from the square root.
+What's $\sin^2 + \cos^2$?\\
+Student: Oh duh, one, the Pythagorean identity,
+so $Rd\theta$,
+because $\sqrt{1} = 1$
+and one times anything = anything.\\
+Teacher: Yes.
+So you have $ds = R d\theta$.
+This is a very nice result: the length of an arc of a circle is equal to the radius times the angle of that arc.
+This is, actually, how angle is usually defined, but here we derived it from the starting point that a circle is defined by $x = R \cos(\theta)$ and $y = R \sin(\theta)$.
+Now, how much arc length do you get if the angle goes from 0 to $2\pi$?\\
+Student: Not sure...$2\pi$?\\
+Teacher: Well, let's just do it. $$s_\text{total} = \int_{\theta=0}^{2\pi} R d\theta$$
+$$=R \int_{\theta=0}^{2\pi} d \theta = ?$$\\
+Student: $2\pi R$ - 
+the circumference of the circle!
+Which makes sense because $2\pi$ is a full revolution around!\\
+Teacher: Right! You actually just did some multivariable calculus.
+Remember we started with the Pythagorean thingy $ds = \sqrt{dx^2 + dy^2}$.
+That tells you the length of a bit of curve in the 2D plane.
+Then you used a parametrization of the circle, i.e. $x = R \cos(\theta)$ and $y = R \sin(\theta)$ to figure out $dx$ and $dy$ in terms of a single variable $\theta$, and then you did the integral to get the total path length.\\
+Student: oh...wow, that's cool!\\
+Teacher: Yes, it is!
