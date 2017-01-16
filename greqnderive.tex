@@ -6,3 +6,37 @@ Let's start by imagining a grassy field, something like the one shown below.
 \begin{figure}[H]
 \includegraphics[scale=0.25]{field.jpg}
 \end{figure}
+Our grassy field is very bumpy, and so we want to find the height of the field (above sea level) where the person is standing. Well, to do so, first we must describe where the person is standing, so we impose a coordinate system, with an x and y axis, to show where our person is standing.
+We also use $\phi$ to represent the height of the field at any one point. 
+Now, suppose I ask you, if I moved, how much my height would change. Hopefully you would respond that it depends on the direction
+of my movement. This point we will need for later: the direction of movement matters when considering this question.
+
+Let's forget about the field for a moment and think about something called a gradient.
+\begin{figure}[H]
+\includegraphics[scale=0.25]{gradient.jpg}
+\end{figure}
+A gradient is kind of like the scale on a map - it relates one distance to another. In our case, though, it relates the distance we walk to the change in height. In the gradient shown above, if we move 10 meters forward, we lose a meter in height. We can describe this gradient more generally using calculus. 
+\begin{equation*}
+d\phi=\frac{d\phi}{dx}dx
+\end{equation*}
+What does this equation mean? Well, on the left hand side, the term $d\phi$ means change in $\phi$, or, in our case, change in height. So, the change in height is equal to what? Well, the first term on the right hand side of the equation is change in height with respect to change in $x$, or our position. Really, this term represents the gradient! The next term merely means change in position, so we are saying that change in height is equal to the gradent multiplied by the change in position.
+Let's test this with our gradient. Let's say we move $5$ meters. $d\phi=\frac{1}{10}\cdot 5$, which equals $\frac{1}{2}$. This makes sense, right? Just looking at the gradient intuitively we can see this.
+Now, returning to our field, because the field is so bumpy, there is no clear gradient, but over very small distances this gradient could be true. So that is why we are using calculus (to some extent) here, we are dealing with very small quantities.
+You'll also remember that we said earlier that direction matters. So instead of looking at change in height overall, let's say we look at change in height when we move in the $x$ direction and change in height when we move in the $y$ direction.
+\begin{equation*}
+d\phi_x=\frac{d\phi}{dx}dx
+\end{equation*}
+The above equation describes how height changes in the $x$ direction. Notice where $x$ shows up in the equation. We can replace these occurences with $y$ and get
+\begin{equation*}
+d\phi_y=\frac{d\phi}{dy}dy
+\end{equation*}
+Now, let's imagine that the person on the field is tired of moving in just the $x$ or $y$ direction. They want to go in a new direction, like shown below.
+\begin{figure}[H]
+\includegraphics[scale=0.5]{sdir.jpg}
+\end{figure}
+How can we describe the change in height over that direction, $s$? Well, if you'll remember from the linear algebra section, we can treat vectors as combinations of other vectors. So what if we did that with this direction, composing it of the $x$ and $y$ directions?
+This would give us the equation $d\phi_s=d\phi_x+d\phi_y$, which, if you plug in the numbers given in the earlier equations, gives
+\begin{equation*}
+d\phi_s=\frac{\partial\phi}{\partial x}\partial x|\frac{\partial\phi}{\partial y}\partial y
+\end{equation}*
+Notice how we switch to the partial derivative symbol, because we're dealing with multiple variables.
