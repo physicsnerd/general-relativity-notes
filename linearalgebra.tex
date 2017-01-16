@@ -1,25 +1,31 @@
- \section{Vectors}
+\section{Vectors}
 Imagine an arrow, floating in space. Try to describe where in space it is to someone else. It's difficult, isn't it?
 Now, imagine that same arrow on the Cartesian plane, with its tail on the origin. Describe where the arrow is by giving the coordinates of the tip of the arrow, in the form $\begin{bmatrix}x\\y\end{bmatrix}$.
 Much easier, right? Well, we call these arrows vectors, and they represent both magnitude (the length of the vector) and direction (which way the vector is pointing). 
+\begin{center}
 \begin{figure}[H]
-\includegraphics{visualvectordotproduct1.jpg}
+\includegraphics[scale=0.7]{visualvectordotproduct1.jpg}
 \end{figure}
+\end{center}
 In the figure above, you'll see how we look at vectors. The vector is represented by the coordinates of the tip of the vector, with the tail on the origin. We can perform operations on vectors, like adding. A diagram of this is shown below.
 \begin{figure}[H]
-\includegraphics{Figure_03_03_05a.jpg}
+\includegraphics[scale=0.5]{Figure_03_03_05a.jpg}
 \end{figure}
 Geometrically, adding is done by placing the second vector's tail at the tip of the first vector, and drawing the new vector from the tail of the first to the tip of the second. Mathematically, this is done by doing $\begin{bmatrix}x_1\\y_1\end{bmatrix}+\begin{bmatrix}x_2\\y_2\end{bmatrix}=\begin{bmatrix}x_1+x_2\\y_1+y_2\end{bmatrix}$. So adding vectors is fairly simple, and subtraction of vectors operates on the same principle.
-We can also multiply vectors by normal numbers, or scalars. 
+We can also multiply vectors by normal numbers, or scalars.
+\begin{center}
 \begin{figure}[H]
-\includegraphics{mult2.png}
+\includegraphics[scale=0.5]{mult2.png}
 \end{figure}
+\end{center}
 The scalar stretches the vector if it is positive and greater than one, keeps the vector the same if it is one, shrinks the vector while less than one and greater than zero, makes the vector into a point if it is zero, and flips the vector and stretches or shrinks it as described if it is negative.
 In this, it is just like multiplication of two normal numbers. The next important thing about vectors is that there are basis vectors. Imagine a small vector, taking up one unit of each of the axes on the coordinate plane. 
+\begin{center}
 \begin{figure}[H]
-\includegraphics{basis.jpg}
+\includegraphics[scale=0.25]{basis.jpg}
 \end{figure}
-These two vectors are called $\hat{i}$ (read i-hat) and $\hat{j}$ (read j-hat). What's interesting is that all vectors are composed of these basis vectors (a new basis vector is added for each dimension). How? Well, let's say we have a vector $\mathbb{v}$ (variables for vectors are commonly bolded or written with an arrow on top). We can write it as a scalar $a$ multiplied by the basis vector $\hat{i}$ plus another scalar $b$ multiplied by the basis vector $\hat{j}$. You can also pick different basis vectors, by changing the axes, and get a new logical system.
+\end{center}
+These two vectors are called $\hat{i}$ (read i-hat) and $\hat{j}$ (read j-hat). What's interesting is that all vectors are composed of these basis vectors (a new basis vector is added for each dimension). How? Well, let's say we have a vector $\mathbf{v}$ (variables for vectors are commonly bolded or written with an arrow on top). We can write it as a scalar $a$ multiplied by the basis vector $\hat{i}$ plus another scalar $b$ multiplied by the basis vector $\hat{j}$. You can also pick different basis vectors, by changing the axes, and get a new logical system.
 \section{Matrices}
 So we have this concept of vectors. But linear algebra isn't just about vectors, it also talks about matrices. Basically, matrices represent transformations of the coordinate plane, and all the vectors in it. A transformation is a function, with vector inputs and outputs. The functions, however, must be linear. This can be thought of geometrically as keeping all of the gridlines of the coordinate plane straight and parallel, and keeping them from getting curved. The other rule is that the origin must remain fixed in place.
 So, how do matrices represent this transformation? Well, they just show where $\hat{i}$ and $\hat{j}$ end up. So, if $\hat{i}$'s coordinates are $\begin{bmatrix}\hat{i}_x\\\hat{i}_y\end{bmatrix}$ and $\hat{j}$'s coordinates are $\begin{bmatrix}\hat{j}_x\\\hat{j}_y\end{bmatrix}$, the matrix representing that transformation would be $\begin{bmatrix}\hat{i}_x & \hat{j}_x\\\hat{i}_y & \hat{j}_y\end{bmatrix}$. We can multiply this matrix by any vector to get what the coordinates of that vector would be in the new system.
@@ -29,9 +35,11 @@ Suppose, however, that we wish to do two transformations. Instead of applying ea
 \end{equation*}
 \section{Determinants}
 The next important thing about linear algebra is the determinant. Basically, the deteriminant is the area of one grid square.
+\begin{center}
 \begin{figure}[H]
-\includegraphics{determinant.png}
+\includegraphics[scale=0.5]{determinant.png}
 \end{figure}
+\end{center}
 The determinant changes depending on the basis vectors. Because a matrix represents a linear transformation, and therefore the basis vectors, we can calculate the determinant of a 2x2 matrix as follows:
 \begin{equation*}
 \det\left(\begin{bmatrix}a&b\\c&d\end{bmatrix}\right)=ad-bc
@@ -57,3 +65,5 @@ The rule is different, and more complicated, for 3x3 matrices. In the case of ou
 \begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}-\frac{11}{4}\\-\frac{5}{2}\end{bmatrix}
 \end{equation*}
 And so we have the solutions to our system.
+\section{What Next?}
+This overview of linear algebra really only scratches the surface, and it covers most of it in only two dimensions. There are other interesting functions (the cross product, for instance), subfields (such as multilinear algebra, which is actually rather relevant to general relativity), such things as vector spaces, and other interesting areas of study. It is recommended that the reader make an attempt to examine some of these areas.
