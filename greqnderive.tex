@@ -40,3 +40,36 @@ This would give us the equation $d\phi_s=d\phi_x+d\phi_y$, which, if you plug in
 d\phi_s=\frac{\partial\phi}{\partial x}\partial x+\frac{\partial\phi}{\partial y}\partial y
 \end{equation*}
 Notice how we switch to the partial derivative symbol, because we're dealing with multiple variables.
+
+Now we're going to do a quick coordinate change, from $x$ and $y$ to $x^1$ and $x^2$ respectively. Why? Well, it is simpler to add extra dimensions this way. If we were to add extra letters, it is more difficult, because letters often have specific meanings in physics and so could be construed for something else. However, there are an infinite number of numbers, so we can simply, if adding a third dimension, call it $x^n$. So, substituting in these coordinates, we get
+\begin{equation*}
+    d\phi= \frac{\partial \phi}{\partial x^1}\partial x^1+\frac{\partial\phi}{\partial x^2}dx^2+...
+\end{equation*}
+The reason for the $+...$ is merely to account for other dimensions. Now, we can rewrite this equation using summation notation, getting
+\begin{equation}
+    d\phi=\sum\limits_n\frac{\partial\phi}{\partial x^n}dx^n
+\end{equation}
+(We'll be referencing this equation later as equation one.) Note that all the sum notation is is a way to represent the fact that we are adding all of the different dimensions (all of the components of whichever direction we are going).
+
+Now, let's consider a different situation: what if we have a different coordinate system, $y^1$ and $y^2$, and we wish to convert between $\frac{\partial\phi}{\partial x^n}$ and $\frac{\partial\phi}{\partial y^n}$. How could we do that? (Let's imagine that the $y$ coordinate system looks something like that in the diagram shown below.)
+\begin{figure}[H]
+    \centering
+    \includegraphics{newcor.jpg}
+\end{figure}
+Note that to identify a $y^1$ coordinate in the $x$ system, one needs two $x$ coordinates. One can convert using the equation 
+\begin{equation*}
+    \frac{\partial\phi}{\partial y^1}=\frac{\partial\phi}{x^1}\frac{\partial x^1}{\partial y^1}+\frac{\partial\phi}{\partial x^2}\frac{\partial x^2}{y^1}
+\end{equation*}
+which can be further reduced to
+\begin{equation}
+    \frac{\partial\phi}{\partial y^n}=\sum\limits_m\frac{\partial\phi}{\partial x^m}\frac{\partial x^m}{\partial y^n}
+\end{equation}
+We'll refer to this equation later as equation two. Now, we must enter a brief interlude to continue.
+\section{Tensors}
+We have already talked about, in the chapter on linear algebra, scalars and vectors. Tensors are a further generalization of vectors. Scalars are tensors of rank 0, vectors are tensors of rank 1, matrices are tensors of rank 2, and so on. There are multiple ways one can define a tensor, but here, we'll define a tensor as a function that takes in vectors and spits out a scalar. (Another way of describing a tensor is that it takes only one number to pick out an individual component of a vector, hence, vectors are rank one tensors. In other words, the number of indices needed to pick out a component of a tensor defines that tensor's rank.)
+
+Now, keeping this in mind, let us rewrite equation one replacing $d\phi$ and $dx$ with vectors. This gives the equation
+\begin{equation}
+    V^n_y=\sum\limits_m\frac{dy^n}{dx^m}V^m_x
+\end{equation}
+(We'll refer to this equation as equation three.) 
