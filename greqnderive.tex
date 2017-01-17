@@ -73,3 +73,11 @@ Now, keeping this in mind, let us rewrite equation one replacing $d\phi$ and $dx
     V^n_y=\sum\limits_m\frac{dy^n}{dx^m}V^m_x
 \end{equation}
 (We'll refer to this equation as equation three.) 
+Let's consider a combination of vectors. Let's take vector $A$, and the $n$th coordinate of that vector $A^n$, and then take another vector $B$ and then take the $m$th coordinate, $B^m$. If we multiply these two together, we get a tensor, $T^{mn}$. Further, if we use equation three, we can create the new equation 
+\begin{equation*}
+    A_y^mB_y^n=\sum\limits_r\frac{\partial y^m}{\partial x^r}A_x^r \sum\limits_s\frac{\partial y^n}{\partial x^s} B_x^s
+\end{equation*}
+which can then be rewritten as 
+\begin{equation}
+    T_y^{mn}=\sum\limits_{rs}\frac{\partial y^m}{\partial x^r}
+\end{equation}
